@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body>
+    <h1>Registro</h1>
+
+    <form action="{{ url_for('register') }}" method="POST">
+        <!-- Campos do formulário -->
+        <input type="text" name="Nome" id="Nome" placeholder="Nome de usuário" required value="{{ form.Nome.data }}" class="form-control">
+        <input type="email" name="Email" id="Email" placeholder="E-mail" required value="{{ form.Email.data }}" class="form-control">
+        <input type="password" name="Senha" id="Senha" placeholder="Senha" required value="{{ form.Senha.data }}" class="form-control">
+        <button type="submit">Registrar</button>
+    </form>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>
